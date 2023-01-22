@@ -69,7 +69,7 @@ class TelegraphHelper:
                     nxt_page += 1
             self.edit_page(
                 path = path[prev_page],
-                title = 'Z Torrent Search',
+                title = 'HGDMB Torrent Search',
                 content=content
             )
         return
@@ -82,7 +82,7 @@ class TelegraphHelper:
             LOGGER.error(f'Failed Revoking telegraph access token due to : {e}')
 
 try:
-    telegraph=TelegraphHelper('Z', 'https://github.com/Dawn-India/Z-Mirror')
+    telegraph=TelegraphHelper('HGDMB', 'https://t.me/aadeezmirror_bot')
 except Exception as err:
     LOGGER.warning(f"Can't Create Telegraph Account: {err}")
     telegraph = None
