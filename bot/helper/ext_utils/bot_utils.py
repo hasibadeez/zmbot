@@ -160,7 +160,7 @@ def bot_sys_stats():
     sent = get_readable_file_size(psutil.net_io_counters().bytes_sent)
     cpuUsage = cpu_percent(interval=1)
     return f"""
-BOT SYSTEM STATS
+HGDM BOT SYSTEM STATS
 
 CPU:  {progress_bar(cpuUsage)} {cpuUsage}%
 RAM: {progress_bar(mem_p)} {mem_p}%
@@ -170,11 +170,8 @@ T: {disk_t} | F: {disk_f}
 Working For: {currentTime}
 T-DL: {recv} | T-UL: {sent}
 
-Made with ❤️ by Dawn
+Made with ❤️ by Hasib
 """
-
-#----Thanks for deleting my name ❤️ Appreciate it----#
-#----------Remove this line too, who cares----------#
 
 dispatcher.add_handler(CallbackQueryHandler(pop_up_stats, pattern=f"^{str(THREE)}$"))
 
