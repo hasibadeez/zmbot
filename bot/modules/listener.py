@@ -380,19 +380,19 @@ class MirrorLeechListener:
             buttons = ButtonMaker()
             if not config_dict['DISABLE_DRIVE_LINK']:
                 link = short_url(link)
-                buttons.buildbutton("🔐 Drive Link", link)
+                buttons.buildbutton("☁️ Drive Link ☁️", link)
             LOGGER.info(f'Done Uploading {name}')
             if INDEX_URL:= CATEGORY_INDEXES[self.c_index]:
                 url_path = rutils.quote(f'{name}')
                 if typ == "Folder":
                     share_url = short_url(f'{INDEX_URL}/{url_path}/')
-                    buttons.buildbutton("📁 Index Link", share_url)
+                    buttons.buildbutton("🚀 Index Link 🔥", share_url)
                 else:
                     share_url = short_url(f'{INDEX_URL}/{url_path}')
-                    buttons.buildbutton("🚀 Index Link", share_url)
+                    buttons.buildbutton("🚀 Index Link 🔥", share_url)
                     if config_dict['VIEW_LINK']:
                         share_urls = short_url(f'{INDEX_URL}/{url_path}?a=view')
-                        buttons.buildbutton("💻 View Link", share_urls)
+                        buttons.buildbutton("💻 View Link 📎", share_urls)
             buttons = extra_btns(buttons)
             if self.dmMessage:
                 sendMessage(msg, self.bot, self.dmMessage, buttons.build_menu(2))
@@ -405,7 +405,7 @@ class MirrorLeechListener:
             if self.logMessage:
                 if config_dict['DISABLE_DRIVE_LINK']:
                     link = short_url(link)
-                    buttons.buildbutton("🔐 Drive Link", link, 'header')
+                    buttons.buildbutton("☁️ Drive Link ☁️", link, 'header')
                 sendMessage(msg, self.bot, self.logMessage, buttons.build_menu(2))
             if not self.isClone and self.seed:
                 if self.isZip:
